@@ -6,7 +6,7 @@ export const getIssues = (page) => (dispatch, getState) => {
     const state = getState();
 
     const callApi = async () => {
-        const url = `${GIT_ISSUE_ENDPOINT}?per_page=10&&page=${page}`
+        const url = `${GIT_ISSUE_ENDPOINT}?per_page=20&&page=${page}`
         try {
             const res = await fetch(url, {
                 method: 'GET',

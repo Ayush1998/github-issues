@@ -3,8 +3,8 @@ import React from 'react'
 const Filters = () => {
     return (
         <div className="filters">
-            <div style={{display : 'flex'}}>
-                <div style={{display : 'flex'}}>
+            <div style={{display : 'flex'}} className="filters_left">
+                <div style={{display : 'flex'}} >
                     <div className="filter_options">Filter
                         <img src="/images/down.svg" alt="icon"/>
                     </div>

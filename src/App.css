@@ -271,3 +271,12 @@
 .last_opened_issue a{
   color: rgb(88, 96, 105);
 }
+
+@media screen and (max-width: 768px){
+  .main_head{
+    height: 50%;
+  }
+  .filters, .nav_links, .filters_left, .nav_right, .issue_table_header_right, .issue_table_header{
+    flex-direction: column;
+  }
+}
