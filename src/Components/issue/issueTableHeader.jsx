@@ -10,7 +10,7 @@ const IssueTableHeader = (props) => {
                 <a href="https://github.com/facebook/react/issues?q=is%3Aopen+is%3Aissue">253 open</a>
                 </div>
                 <div style={{display :'flex', marginLeft : '10px'}}>
-                <img src="/images/tick.svg" style={{width : '1.5rem'}}/>
+                <img src="/images/tick.svg" style={{width : '1.5rem'}} alt="icon"/>
                 <a href="https://github.com/facebook/react/issues?q=is%3Aopen+is%3Aissue" style={{float : 'right'}}>6378 closed</a>
                 </div>
             </div>

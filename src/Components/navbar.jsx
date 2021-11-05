@@ -19,8 +19,8 @@ const Navbar = (props) => {
         <div className="nav">
             <div className="nav_left">
                 <img src="/images/repo.svg" alt="icon" style={{marginRight : '5px'}}/>
-                <a href="#">{props.user}</a>{" "}/{" "}
-                <a className="repo_name" href="#">{props.repo}</a>
+                <a href="https://github.com/facebook">{props.user}</a>{" "}/{" "}
+                <a className="repo_name" href="https://github.com/facebook/react">{props.repo}</a>
             </div>
             <div className="nav_right" style={{display : 'flex'}}>
                 <RepoCounts image={"/images/eye.svg"} tag={props.repoDetails.isWatch? "Unwatch" : "Watch"} counts={props.repoDetails.watchCount} handleCount={handleWatchCount} />

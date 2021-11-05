@@ -5,7 +5,7 @@ import  IssueTable  from './issue/issueTable'
 import Navbar from './navbar'
 
 const Main = (props) => {
-    const [selected, setSelected] = useState("Issues")
+    const [selected] = useState("Issues")
     return (
         <div className="main">
             <div className="main_head">

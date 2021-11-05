@@ -16,9 +16,7 @@ const IssueTable = (props) => {
           setPage((prev) => prev + 1);
         }
       }, []);
-
     useEffect(() => {
-        fetchIssues()
         const option = {
             root: null,
             rootMargin: "20px",
@@ -26,10 +24,11 @@ const IssueTable = (props) => {
           };
           const observer = new IntersectionObserver(handleObserver, option);
           if (loader.current) observer.observe(loader.current);
-    }, [])
+    }, [handleObserver])
 
     useEffect(() => {
         fetchIssues()
+        // eslint-disable-next-line 
     }, [page])
 
     const fetchIssues = async() => {
@@ -48,7 +47,7 @@ const IssueTable = (props) => {
                     <div className="single_issue" key={i}>
                         <div className="issue_title">
                             <i className="fa fa-exclamation-circle" aria-hidden="true" style={{color : 'rgb(40, 167, 69)'}}></i>
-                            <a href={issue.html_url} target="_blank">{issue?.title}</a>
+                            <a href={issue.html_url} target="_blank" rel="noreferrer">{issue?.title}</a>
                             <span style={{fontSize : '16px'}}>
                                 {(issue.labels || []).map((label) => (
                                     <span key={label.id} className="issue_label" style={{backgroundColor : `#${label.color}`}}>{label.name}</span>
