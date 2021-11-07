@@ -16,7 +16,7 @@ export const getIssues = (page) => (dispatch, getState) => {
             if (res.status === 500) {
                 throw res;
             }
-            if (res.status === 400) {
+            if (res.status === 401) {
                 const error = res_data
                 if (error) {
                     dispatch({ type: `${ISSUES}_failed`, payload: error })
